@@ -1,10 +1,10 @@
 import requests
 
-SERVER_URL = "http://localhost:5000/check-password"
+SERVER_URL = "https://password-checking-server.onrender.com/check-password"
 
 def main():
     try:
-        responce = requests.get("http://localhost:5000/health", timeout=5)
+        responce = requests.get("https://password-checking-server.onrender.com/health", timeout=5)
         if responce.status_code == 200:
             print("Server is running and available")
     except requests.ConnectionError:
